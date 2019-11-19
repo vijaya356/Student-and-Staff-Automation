@@ -45,6 +45,13 @@ public class StudentController {
 		studentservice.deleteStudent(id);
 	}
 	
+	@PostMapping("/editStudent")
+	public void editStudent(@RequestBody Student student) {
+		System.out.println("eqwre   .............");
+		studentservice.editStudent(student);
+		
+	}
+	
 	
 
 }

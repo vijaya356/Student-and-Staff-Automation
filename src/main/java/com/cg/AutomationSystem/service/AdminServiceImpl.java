@@ -68,7 +68,7 @@ public class AdminServiceImpl implements AdminService {
 		if(regcourse!=null) {
 			for(int i=0;i<regcourse.size();i++) {
 				courseList.add(courseDao.findById(regcourse.get(i)).get());
-				System.out.println(courseList.get(i));
+				//System.out.println(courseList.get(i));
 			}
 			return courseList;
 			

@@ -52,21 +52,22 @@ public class StudentServiceImpl implements StudentService {
 	public void deleteStudent(int id) {
 		// TODO Auto-generated method stub
 		studentdao.deleteById(id);
-		
+
 	}
 
 	@Override
 	public void editStudent(Student student) {
 		// TODO Auto-generated method stub
-		Student s = new Student();
-		s.setId(student.getId());
-		s.setPassword(student.getPassword());
-		s.setUserName(student.getUserName());
-		s.setEmail(student.getEmail());
-		s.setStuddepart(student.getStuddepart());
-		studentdao.save(student);
-		
-		
+		Student s = new Student(student.getId(),student.getStudFName(), student.getStudLName(), student.getPhonenum(),
+				student.getUserName(), student.getPassword(), student.getEmail(), student.getStuddepart());
+		System.out.println(s);
+//		s.setId(student.getId());
+//		s.setPassword(student.getPassword());
+//		s.setUserName(student.getUserName());
+//		s.setEmail(student.getEmail());
+//		s.setStuddepart(student.getStuddepart());
+		studentdao.save(s);
+
 	}
 
 }

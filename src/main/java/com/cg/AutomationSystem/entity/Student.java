@@ -35,9 +35,10 @@ public class Student {
 
 	
 
-	public Student(String studFName, String studLName, String phonenum, String userName, String password, String email,
+	public Student(int id,String studFName, String studLName, String phonenum, String userName, String password, String email,
 			String studdepart) {
 		super();
+		this.id=id;
 		this.studFName = studFName;
 		this.studLName = studLName;
 		this.phonenum = phonenum;
@@ -48,8 +49,17 @@ public class Student {
 	}
 
 	
-
 	
+	
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", studFName=" + studFName + ", studLName=" + studLName + ", phonenum=" + phonenum
+				+ ", userName=" + userName + ", password=" + password + ", email=" + email + ", studdepart="
+				+ studdepart + "]";
+	}
+
+
+
 	public int getId() {
 		return id;
 	}

@@ -17,9 +17,9 @@ public class Course {
 	private String courseName;
 	@Column(length = 20)
 	private String facultyName;
-	@Column(length = 20)
+	@Column(length = 50)
 	private String startDate;
-	@Column(length = 20)
+	@Column(length = 50)
 	private String endDate;
 	@Column(length = 20)
 	private int capacity;
